@@ -8,8 +8,11 @@ class Person:
     def lastName(self):
         return self.name.split()[-1]
 
-    def giveRaise(self, persent):
-        self.pay *= (1.0 + persent)
+    def giveRaise(self, percent):
+        self.pay *= (1.0 + percent)
+
+    def __str__(self):
+        return "<%s => %s>" % (self.__class__.__name__, self.name)
 
 if __name__ == '__main__':
     bob = Person("Bob Smith", 42, 30000, 'software')
@@ -19,3 +22,6 @@ if __name__ == '__main__':
     print(bob.lastName())
     sue.giveRaise(.10)
     print(sue.pay)
+
+    print(bob)
+    print(sue)
