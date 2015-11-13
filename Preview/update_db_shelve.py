@@ -1,5 +1,7 @@
-from initdata import tom
 import shelve
+
+from Preview.initdata import tom
+
 db = shelve.open('people-shelve')
 sue = db['sue']
 sue['pay'] *= 1.5

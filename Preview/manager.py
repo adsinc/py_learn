@@ -1,4 +1,4 @@
-from person import Person
+from Preview.person import Person
 
 
 class Manager(Person):
