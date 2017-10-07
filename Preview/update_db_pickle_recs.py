@@ -1,8 +1,8 @@
 import pickle
-suefile = open('sue.pkl', 'rb')
+suefile = open('tmp/sue.pkl', 'rb')
 sue = pickle.load(suefile)
 suefile.close()
 sue['pay'] *= 1.10
-suefile = open('sue.pkl', 'wb')
+suefile = open('tmp/sue.pkl', 'wb')
 pickle.dump(sue, suefile)
 suefile.close()
