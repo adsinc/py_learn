@@ -2,7 +2,7 @@ import shelve
 from Preview.person import Person
 fieldnames = ('name', 'age', 'job', 'pay')
 
-db = shelve.open('class-shelve')
+db = shelve.open('tmp/class-shelve')
 
 while True:
     key = input('\Key? => ')

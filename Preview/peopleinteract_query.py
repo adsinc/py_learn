@@ -2,7 +2,7 @@ import shelve
 
 fieldnames = ('name', 'age', 'job', 'pay')
 maxfield = max(len(f) for f in fieldnames)
-db = shelve.open('class-shelve')
+db = shelve.open('tmp/class-shelve')
 
 while True:
     key = input('\Key? => ')
@@ -11,7 +11,7 @@ while True:
 
     try:
         record = db[key]
-    except:
+    except KeyError:
         print('No such key "%s"!' % key)
     else:
         for field in fieldnames:
