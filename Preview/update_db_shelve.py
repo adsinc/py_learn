@@ -2,7 +2,7 @@ import shelve
 
 from Preview.initdata import tom
 
-db = shelve.open('people-shelve')
+db = shelve.open('tmp/people-shelve')
 sue = db['sue']
 sue['pay'] *= 1.5
 db['sue'] = sue
